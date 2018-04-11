@@ -5,9 +5,11 @@ you may add it to your result
 Anuj Kumar <me@anujkch.com>
 http://btechsmartclass.com/DS/U3_T4.html
 '''
-#Node class Start
+
+###### Node class start ######
 class Node(object):
     """docstring for Node."""
+
     def __init__(self, weight,name):
         super(Node, self).__init__()
         self.left = None
@@ -24,7 +26,7 @@ class Node(object):
     def addRight(self, node):
         self.right = node
 
-#Node class end
+######  Node class end ######
 
 #Print in order
 def printInOrder(arg):
@@ -48,6 +50,25 @@ def printPostOrder(arg):
         print arg.weight,arg.name
 
 
+def levelOrderTraversal(root):
+
+    if root == None:
+        return None
+
+    queue = []
+    queue.insert(0,root)
+
+    while len(queue) > 0:
+        current = queue.pop()
+
+        print current.name,current.weight
+
+        if current.left != None:
+            queue.insert(0,current.left)
+
+        if current.right != None:
+            queue.insert(0,current.right)
+
 '''
                                   (5,A) #Root Node
                                 /      \
@@ -62,11 +83,11 @@ def printPostOrder(arg):
       #left_left_left(0,I)  (1,J)             (10,K)#right_left_right
                             #left_left_right
 
-                                        '''
-
+'''
 
 #Root node
 root = Node(5,"A")
+
 #Left node of root node
 left = Node(4,"B")
 
@@ -106,10 +127,13 @@ root.addLeft(left)
 root.addRight(right)
 
 print "--- IN ---"
-printInOrder(root)
+# printInOrder(root)
 
 print "--- PRE ---"
-printPreOrder(root)
+# printPreOrder(root)
+
 print "---POST---"
-printPostOrder(root)
-print "------"
+# printPostOrder(root)
+
+print "---Level Order Traversal---"
+print levelOrderTraversal(root)

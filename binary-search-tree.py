@@ -1,7 +1,8 @@
 '''
 Auto adjust binary tree
 '''
-#Start Node class
+
+###### Node class start ######
 class Node(object):
     """docstring for Node."""
 
@@ -37,7 +38,7 @@ class Node(object):
             return self.right.getValue(arg)
 
         return self
-#End Node class
+###### Node class end ######
 
 root = Node(6,"A")
 root.addvalue(5,"B")
