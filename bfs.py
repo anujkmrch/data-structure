@@ -83,34 +83,6 @@ root.addLeft(left)
 root.addRight(right)
 
 
-# root = Node(0,10)
-#
-# root_left = Node(1,21)
-#
-# root_left_right = Node(2,15)
-#
-# root_left_right_left = Node(3,18)
-#
-# root_right = Node(1,19)
-#
-# root_right_left = Node(2,-6)
-#
-# root_right_left_right = Node(3,17)
-#
-# root_right_right = Node(2,0)
-#
-# root_right_right_right = Node(3,12)
-#
-# root_right_right.addRight(root_right_right_right)
-# root_right_left.addRight(root_right_left_right)
-# root_right.addLeft(root_right_left)
-# root_right.addRight(root_right_right)
-# root.addRight(root_right)
-#
-# root_left_right.addLeft(root_left_right_left)
-# root_left.addRight(root_left_right)
-# root.addLeft(root_left)
-
 def levelOrder(root):
 
     if root == None:
